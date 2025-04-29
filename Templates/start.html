@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Welcome to ACLC-Bot</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='start.css') }}">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body class="start-page">
+    <div class="start-container">
+        <h1>Welcome to ACLC-Bot</h1>
+        <p>We are here to assist you with any questions!</p>
+        <button id="start-chat-button">Start Chat</button>
+    </div>
+
+    <script>
+        document.getElementById('start-chat-button').addEventListener('click', function() {
+            window.location.href = '/chat';  // Redirect to the chat page
+        });
+    </script>
+</body>
+</html>

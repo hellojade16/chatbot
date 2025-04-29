@@ -6,6 +6,8 @@ from google.genai import types
 
 app = Flask(__name__)
 
+port = int(os.environ.get("PORT", 5000))  # Default to 5000 if PORT is not set
+app.run(host="0.0.0.0", port=port)
 # Initialize the GenAI client
 client = genai.Client(api_key=os.environ.get("GEMINI_API_KEY"))
 model = "gemini-2.0-flash"

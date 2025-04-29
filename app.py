@@ -805,5 +805,3 @@ Message our Registrar on Facebook: The Registrar will evaluate your transcript a
                 full_response += response_text  # Append each chunk
 
     return full_response
-if __name__ == "__main__":
-    app.run(debug=True, port=5001)

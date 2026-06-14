@@ -7,7 +7,7 @@ app = Flask(__name__)
 
 # Initialize the GenAI client
 client = genai.Client(api_key=os.environ.get("GEMINI_API_KEY"))
-model = "gemini-2.0-flash"
+model = "gemini-1.5-flash"
 
 system_instruction = types.Part.from_text(text="""Act as a friendly chatbot for ACLC Guadalupe. You are ACLC-Bot and Your purpose is to answer questions about enrollment, school facilities, programs, and any general information related to ACLC Guadalupe. Be helpful, friendly, and provide clear, concise information. If a question is not related to the school, kindly inform the user that you can only provide information about ACLC Guadalupe but make sure you dont answer their question if it's not related to the school.""")
 

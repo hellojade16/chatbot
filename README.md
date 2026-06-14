@@ -1,3 +1,5 @@
+# https://aclc-bot.onrender.com/
+
 # AI-Powered Alma Mater Chatbot
 This project is a web-based inquiry system designed to automate responses for frequently asked questions regarding school enrollment, facilities, and academic programs. It integrates the Google Gemini API to process natural language queries and provide accurate, context-aware answers.
 

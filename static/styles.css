@@ -1,0 +1,163 @@
+/* Body setup */
+body {
+    font-family: 'Poppins', sans-serif;
+    background: linear-gradient(135deg, #f5f7fa, #c3cfe2); /* Soft pastel gradient */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+/* Chatbox and container */
+.container {
+    background-color: transparent; /* Remove the white background */
+    box-shadow: none; /* Remove the shadow */
+    border: none; /* Just in case there's any invisible border */
+    border-radius: 0; /* Remove rounded corners if you want it flush */
+    width: 100%;
+    max-width: 420px;
+    height: 80vh;
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    overflow: hidden;
+}
+
+/* Header styling */
+header {
+    background: #2980b9;
+    color: white;
+    padding: 15px 20px; /* Adjusted padding */
+    font-size: 1.4rem; /* Smaller font size */
+    font-weight: 600;
+    text-align: center; /* Center the header text */
+    border-bottom: 1px solid #ddd;
+    border-radius: 30px 30px 0 0;
+    height: 60px; /* Fixed height for the header */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Chatbox styling: make it scrollable */
+.chat-box {
+    flex-grow: 1;
+    background: #f9f9f9;
+    padding: 10px;
+    border-radius: 10px;
+    overflow-y: auto; /* Enables scrolling */
+    max-height: calc(75vh - 60px); /* Calculate remaining space for chatbox */
+    display: flex;
+    flex-direction: column;
+}
+
+/* Message styling */
+.message {
+    margin-bottom: 12px;
+    max-width: 80%;
+    padding: 14px 20px;
+    border-radius: 25px;
+    font-size: 1.1rem;
+    line-height: 1.4;
+    opacity: 0;
+    transform: translateY(10px);
+    animation: slideIn 0.4s ease-out forwards;
+}
+
+@keyframes slideIn {
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Bot Message */
+.bot-message {
+    background-color: #f4f4f4; /* Dirty white color for the bot message */
+    color: #333; /* Dark text for better contrast */
+    border: 1px solid #ddd; /* Subtle border for separation */
+    align-self: flex-start;
+    padding: 14px 20px;
+    border-radius: 25px;
+    font-size: 1.1rem;
+    line-height: 1.4;
+}
+
+/* User Message */
+.user-message {
+    background-color: #f4f4f4; /* Dirty white color for the user message */
+    color: #333; /* Dark text for better contrast */
+    border: 1px solid #ddd; /* Subtle border for separation */
+    align-self: flex-end;
+    padding: 14px 20px;
+    border-radius: 25px;
+    font-size: 1.1rem;
+    line-height: 1.4;
+}
+
+
+/* Input section */
+.input-section {
+    display: flex;
+    align-items: center;
+    padding: 12px 20px;
+    background-color: #fff;
+    border-top: 1px solid #eee;
+    border-radius: 0 0 30px 30px;
+}
+
+#user-input {
+    flex: 1;
+    padding: 12px 20px;
+    border-radius: 25px;
+    border: 2px solid #ddd;
+    background-color: #f3f4f9;
+    font-size: 1.1rem;
+    outline: none;
+    margin-right: 15px;
+}
+
+#send-button {
+    background-color: #3498db;
+    color: white;
+    padding: 12px 22px;
+    border-radius: 25px;
+    border: none;
+    cursor: pointer;
+    font-size: 1.1rem;
+    transition: transform 0.2s ease, background-color 0.3s ease;
+}
+
+#send-button:hover {
+    background-color: #2980b9;
+    transform: translateY(-3px);
+}
+
+#send-button:active {
+    transform: translateY(1px);
+}
+
+/* Sender label */
+.sender-label {
+    font-size: 0.85rem;
+    color: #666;
+    margin-bottom: 6px;
+    font-weight: 500;
+}
+
+/* Mobile-friendly adjustments */
+@media (max-width: 480px) {
+    .container {
+        margin: 10px;
+        border-radius: 20px;
+    }
+
+    header {
+        font-size: 1.2rem;
+    }
+}
